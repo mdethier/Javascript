@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var</title>
+</head>
+
+<body id="body">
+    <script>
+        const maConstante = "Du blabla";
+        // Une fois déclarée, la constante ne peut pas changer !
+        // maConstante = "Tentative de modif !";
+        // vous allez avoir une erreur dans la console !
+
+        // Par contre les objets peuvent être modifiés, c'est l'association qui ne peut être changer
+        const unTableau = ["Du blabla", "Du blabla 2", "Du blabla 3"]; // ceci est un tableau
+        unTableau.push("Du blabla 4", "Du blabla 5");
+        console.log(unTableau);
+
+        const unObjet = { nom: "John", prennom: "Doe" }; // ceci est un objet
+        unObjet.age = 42
+        console.log(unObjet);
+
+        const bodyChange = document.querySelector("#body");
+        bodyChange.style.backgroundColor = "red";
+    </script>
+</body>
+
+</html>

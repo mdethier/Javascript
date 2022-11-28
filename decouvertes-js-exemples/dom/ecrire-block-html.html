@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecrire un block de html</title>
+    <style>
+        .nom {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ici"></div>
+    <script>
+        const whereToWrite = document.querySelector("#ici");
+
+        const someData = { prenom: "John", nom: "Doe", age: 42 };
+
+        let someCode = `<div class="nom">${someData.nom}</div>
+       <div>${someData.prenom}</div>
+       <div>Mon age est de ${someData.age}</div>`;
+
+       whereToWrite.innerHTML = someCode;
+    </script>
+</body>
+
+</html>

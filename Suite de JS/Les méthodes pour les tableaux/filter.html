@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array filter</title>
+</head>
+
+<body>
+    <script>
+        const personnes = [{ nom: "Philippe", age: 58 }, { nom: "Alain", age: 67 }, { nom: "Kevin", age: 34 }, { nom: "Brenda", age: 29 }, { nom: "Aline", age: 42 }];
+
+        // .filter() - retourne un nouveau tableau
+        function startWithA(personne) {
+            if (personne.nom.startsWith("A")) {
+                return personne;
+            }
+        }
+        console.log(personnes.filter(startWithA));
+
+        console.log(personnes.filter(personne => personne.nom[0] == "A"));
+
+        console.log(personnes.filter(personne => personne.age > 30));
+
+    </script>
+</body>
+
+</html>

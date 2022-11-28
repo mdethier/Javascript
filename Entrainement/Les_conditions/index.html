@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sexe = "femme";
+        let age = 12;
+
+        if (age >= 0 && age <= 12 ) {
+            console.log("C'est un enfant");
+               
+        } else if (age > 12 && age <= 16 ) {
+            console.log("C'est un adolescent");
+
+        } else if (age > 16 && age <= 30 && sexe === "homme" ) {
+            console.log("C'est un jeune homme");
+        } else if (age > 16 && age <= 30 && sexe === "femme" ) {
+            console.log("C'est une jeune femme");
+        } else if (age > 30 && age <= 62 && sexe === "homme" ) {
+            console.log("C'est un homme dans la force de l'âge");
+        } else if (age > 30 && age <= 62 && sexe === "femme" ) {
+            console.log("C'est une femme dans la force de l'âge");
+        } else if (age > 62 && sexe === "homme") {
+            console.log("C'est un retraité");
+        } else if (age > 62 && sexe === "femme") {
+            console.log("C'est une retraitée");
+        } else {
+            console.log("Difficile de dire qui est cette personne");
+        }
+        
+
+
+    </script>
+</body>
+</html>

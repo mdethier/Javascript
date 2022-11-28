@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boucle dans un objet</title>
+</head>
+
+<body>
+    <script>
+        const dwwm3 = { promo: "DWWM3", formateurs: ["Thomas Lambotin", "Gérôme Fresse"], apprenants: ["BAALI Ike-David", "DETHIER Maxime", "DOMERGUE Jonathan", "FALCONNIER Franck", "OZMANOV Alick", "PENTEADO Anthony", "PETIT Wilfrid", "PICHOFF Brandon", "TRAVASSOS Carl-Antoine"] };
+        for (let key in dwwm3) {
+            console.log(dwwm3[key]); // c'est ca qui nous interesse, le reste c'est juste pour la rigolade !
+            if (key == "formateurs") {
+                let formateurs = "";
+                for (let i = 0; i < (dwwm3[key].length); i++) {
+                    if (i < dwwm3[key].length - 1) {
+                        formateurs += dwwm3[key][i].split(" ")[0] + " et ";
+                    } else {
+                        formateurs += dwwm3[key][i].split(" ")[0];
+                    }
+                }
+                alert(formateurs+" sont vraiment formidables !");
+            }
+        } 
+    </script>
+</body>
+
+</html>

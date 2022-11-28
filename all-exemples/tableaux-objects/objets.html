@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les objets</title>
+</head>
+
+<body>
+    <script>
+const maVoiture = {marque:"Peugeot", modele:"405",annee: 1990,carburant:"diesel", revision:[1990,1992,1996,1998]};
+console.log(maVoiture.modele);
+console.log("Année de révision " +maVoiture.revision);
+maVoiture.annee = 1992;
+maVoiture.revision.push(2000);
+console.log(maVoiture);
+delete maVoiture.annee;
+console.log(maVoiture);
+    </script>
+</body>
+
+</html>

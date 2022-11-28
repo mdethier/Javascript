@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const groupe = [42, 67, 46, 39, 72, 55, 39, 64, 44];
+        let start=0;
+        function calculMoyenne() {
+        for (i = 0; i < groupe.length ; i++) {
+            start = start + groupe[i];
+            }
+        let moyenne = start/groupe.length;
+        return moyenne ;
+    }
+       console.log(calculMoyenne());
+
+       function calculYounger () { 
+        let younger = groupe.sort();
+        return younger[0];
+    }
+        console.log(calculYounger());
+
+        function calculOlder () {
+        let older = groupe.reverse(); 
+        return older[0]; 
+        }
+        console.log(calculOlder());
+      
+      
+
+    </script>
+</body>
+</html>

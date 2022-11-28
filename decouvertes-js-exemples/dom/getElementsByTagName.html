@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" name="nom">
+<input type="text" name="prenom">
+<input type="text" name="prenom">
+<input type="text" name="prenom">
+<script>
+
+const getFormByTagName = document.getElementsByTagName("input");
+
+// Attention, le résultat est une collection
+Array.from(getFormByTagName).forEach( element => {
+    element.style.borderColor = "blue";
+})
+getFormByTagName[0].style.borderColor = "red";
+</script>
+
+</body>
+</html>

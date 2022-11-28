@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+    <style>
+        .blockArt {
+            background-color: rgb(182, 68, 37);
+            padding: 30px;
+        }
+
+        body {
+            margin: 20px 100px;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // on va écrire dans le body donc on le sélectionne
+       const CorpsDeTexte = document.querySelector("body");
+        // creation d'une div
+       const Bloc = document.createElement("div");
+        // ajout d'une class à la div
+       Bloc.ClassName = "classStyle";
+       Bloc.classList.add("blockArt");
+        // creation d'une balise titre h1
+       const header = document.createElement("h1");
+       header.ClassName = "header";
+        // ajout de texte
+      header.textContent = "Les chatons c'est mignon !";
+        // creation d'une image
+      let chaton = document.createElement("img");
+      chaton.ClassName = "imageChaton";
+        // ajout de l'attribut src
+        chaton.src = "./chaton.jpeg";
+        // modification de width pour être à 100%
+        chaton.style.width = "100%";
+        // creation d'un paragraphe
+        const paragraphe = document.createElement("p");
+        // ajout de texte
+        paragraphe.textContent = "Lorem ipsum dolor bla bla bla";
+
+        //Ajout des blocks à blockDiv
+       Bloc.prepend(header,chaton,paragraphe);
+        //Ajout de blockDiv au body
+       CorpsDeTexte.prepend(Bloc);
+       
+
+
+    </script>
+</body>
+
+</html>

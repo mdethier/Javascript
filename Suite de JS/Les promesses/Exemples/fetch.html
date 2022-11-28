@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Une promesse</title>
+</head>
+
+<body>
+  <script>
+    // appel d'une url en méthode get avec fetch
+    fetch('https://swapi.py4e.com/api/planets/1', {method: 'GET'}
+).then((response) => {
+  console.log(response.status);
+  // convertion  de ce qui est retourné dans le corp de la page en un objet javascript lisible
+      return response.json();
+    })
+    // recuperation des données en mode chaînable
+      .then((data) => {
+        console.log(data);
+      }) // si erreur
+      .catch((error) => {
+        console.error(error);
+      });
+  </script>
+</body>
+
+</html>

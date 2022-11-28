@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecrire dans le html</title>
+</head>
+<body>
+    <div id="ici"></div>
+    <script>
+        const AddHtml = document.querySelector("#ici");
+        const link = document.createElement('a');
+        link.setAttribute("href", "https://www.google.fr");
+        link.setAttribute("target", "_blank");
+        link.textContent = "Allons chez Google";
+        AddHtml.appendChild(link);
+
+       // Ajoutons une liste
+       const laListe = ["élément 1","élément 2","élément 3"];
+       const elements = document.createElement('ul');
+       laListe.forEach(element => {
+        const elementToAdd = document.createElement('li');
+        elementToAdd.textContent = element;
+        elements.appendChild(elementToAdd);
+       })
+       AddHtml.appendChild(elements);
+    </script>
+</body>
+</html>

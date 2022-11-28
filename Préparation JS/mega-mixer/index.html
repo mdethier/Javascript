@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega-mixer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="titre">MEGA<img class="blender" src="/js-prepa/mega-mixer/images/blender.png" alt="blender">MIXER</h1>
+
+    <div class="configuration">
+        <label class="nombre" for="select">
+            <select class="choix" name="nombre" id="nombre">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </label>
+        <button class="placer" type="button" id="flipper">PLACER</button>
+        
+        <label for="reset">
+            <input class="reset" type="reset">
+        </label>
+    </div>
+                    <div class="cartes">
+
+                        <div class="flipcard h" id="card">
+                            <div class="front start">?</div>
+                            <div class="back">DETHIER Maxime
+                                <img class="smiley-1" src="/js-prepa/mega-mixer/images/smiley/smiley-1.png" alt="smiley-1">
+                            </div>
+                        </div>
+                        
+                            
+                        <div class="flipcard h" id="card">
+                            <div class="front start">?</div>
+                            <div class="back">
+                                <img class="smiley-1" src="/js-prepa/mega-mixer/images/smiley/smiley-1.png" alt="smiley-1">
+                            </div>
+                        </div>
+
+                        <div class="flipcard h" id="card">
+                            <div class="front start">?</div>
+                            <div class="back">
+                                <img class="smiley-1" src="/js-prepa/mega-mixer/images/smiley/smiley-1.png" alt="smiley-1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cartes">
+
+                        <div class="flipcard h" id="card">
+                            <div class="front start">?</div>
+                            <div class="back">
+                                <img class="smiley-1" src="/js-prepa/mega-mixer/images/smiley/smiley-1.png" alt="smiley-1">
+                            </div>
+                        </div>
+                            
+                        <div class="flipcard h" id="card">
+                            <div class="front start">?</div>
+                            <div class="back">
+                                <img class="smiley-1" src="/js-prepa/mega-mixer/images/smiley/smiley-1.png" alt="smiley-1">
+                            </div>
+                        </div>
+
+                        <div class="flipcard h" id="card">
+                            <div class="front start">?</div>
+                            <div class="back">
+                                <img class="smiley-1" src="/js-prepa/mega-mixer/images/smiley/smiley-1.png" alt="smiley-1">
+                            </div>   
+                        </div>
+                    </div>
+
+                    <div class="cartes">
+
+                        <div class="flipcard h" id="card">
+                            <div class="front start">?</div>
+                            <div class="back">
+                                <img class="smiley-1" src="/js-prepa/mega-mixer/images/smiley/smiley-1.png" alt="smiley-1">
+                            </div>
+                        </div>
+                            
+                        <div class="flipcard h" id="card">
+                            <div class="front start">?</div>
+                            <div class="back">
+                                <img class="smiley-1" src="/js-prepa/mega-mixer/images/smiley/smiley-1.png" alt="smiley-1">
+                            </div>
+                        </div>
+
+                        <div class="flipcard h" id="card">
+                            <div class="front start">?</div>
+                            <div class="back">
+                                <img class="smiley-1" src="/js-prepa/mega-mixer/images/smiley/smiley-1.png" alt="smiley-1">
+                            </div>
+                        </div>
+                    </div>
+        <script>
+            let card = document.getElementById("card");
+            let flipper = document.getElementById("flipper");
+        
+            flipper.addEventListener("click", function( event ) {
+                card.classList.toggle('flip');
+            });
+        </script>
+</body>
+</html>

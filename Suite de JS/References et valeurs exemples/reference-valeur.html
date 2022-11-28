@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>passage par valeur et par référence</title>
+</head>
+
+<body>
+    <script>
+        //passage par valeur
+        let unNombre = 12;
+        let unAutre = unNombre;
+        unAutre++;
+        console.log(unNombre);
+
+        //Passage par référence
+        const personnes = [{ nom: "Philippe", age: 58 }, { nom: "Alain", age: 67 }, { nom: "Kevin", age: 34 }, { nom: "Brenda", age: 29 }, { nom: "Aline", age: 42 }];
+        const personnes2 = personnes;
+        personnes2.push({ nom: "albert", age: 75 });
+        console.log(personnes);
+
+        // pour copier des objets
+        const personnes3 = [{ nom: "Philippe", age: 58 }, { nom: "Alain", age: 67 }, { nom: "Kevin", age: 34 }, { nom: "Brenda", age: 29 }, { nom: "Aline", age: 42 }];
+        const personnes4 = [...personnes3];
+        personnes4.push({ nom: "albert", age: 75 });
+        console.log(personnes3);
+
+        // avec pour un objet
+        UnObj = { produit: "Pepito", quantite: 12 };
+        unAutreObj = UnObj;
+        unAutreObj.emplacement = "c12";
+        console.log(UnObj);
+
+        // le même avec une copie
+        UnObj2 = { produit: "Pepito", quantite: 12 };
+        unAutreObj2 = { ...UnObj };
+        unAutreObj2.emplacement = "c12";
+        console.log(UnObj2);
+
+        // avec une fonction 
+        unObj3 = { produit: "Pepito", quantite: 12 };
+        function addPrice(price) {
+            let unObj4 = unObj3;
+            unObj4.price = price;
+        };
+        addPrice(1.80);
+        console.log(unObj3);
+
+        // tentative de copie d'un objet profond
+        const aDeepObject = { marque: "belin", produits: ["pepito", "petit ecolier", "savane"] };
+        const aSimpleCopy = { ...aDeepObject };
+        aSimpleCopy.produits.push("Palmito");
+        console.log(aDeepObject); // ca marche pas !!!!!!
+
+        // tentative de copie d'un objet profond avec structuredClone
+        const aDeepObject2 = { marque: "belin", produits: ["pepito", "petit ecolier", "savane"] };
+        const aSimpleCopy2 = structuredClone(aDeepObject2);
+        aSimpleCopy2.produits.push("Palmito");
+        console.log(aDeepObject2); // ca marche super !!!!!!
+    </script>
+</body>
+
+</html>

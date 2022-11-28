@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if else if</title>
+</head>
+<body>
+    <script>
+        let prenom = "Wilfrid";
+        let heure = 2;
+
+        if ( heure >= 6 && heure <=12) {
+            console.log("Bonne journée "+prenom);
+        } else if (heure > 12 && heure < 16) {
+            console.log("Bonne après-midi "+prenom);
+        } else if (heure >=16 && heure < 21) {
+            console.log("Bonne soirée "+prenom);
+        } else if (heure >=21 && heure <24) {
+            console.log("Bonne nuit "+prenom);
+        } else {
+            console.log("Vas te coucher "+prenom+" !!");
+        }
+
+    </script>
+    
+</body>
+</html>

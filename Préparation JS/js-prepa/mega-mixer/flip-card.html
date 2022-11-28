@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>flip card</title>
+    <style>
+        .flipcard {
+            position: relative;
+            float: left;
+            width: 200px;
+            height: 300px;
+            perspective: 500px;
+            margin: 10px;
+        }
+
+        .flipcard.h.flip .front {
+            transform: rotateY(180deg);
+            background-color: black;
+        }
+
+        .flipcard.h.flip .back {
+            transform: rotateY(0deg);
+            background-color: red;
+        }
+
+        .flipcard.h .back {
+            transform: rotateY(-180deg);
+        }
+
+        .flipcard .front, .flipcard .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            transition: all 0.5s ease-in;
+            padding: 10px;
+            backface-visibility: hidden;
+            border-radius: 10px;
+
+        }
+
+        .start {
+            background-color: black;
+            color:white;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="flipcard h" id="card">
+<div class="front start">
+  front
+</div>
+<div class="back">
+    back
+</div>
+</div><br>
+<button id="flipper">Flip la carte !</button>
+<script>
+    let card = document.getElementById("card");
+    let flipper = document.getElementById("flipper");
+
+    flipper.addEventListener("click", function( event ) {
+        card.classList.toggle('flip');
+    });
+</script>
+</body>
+
+
+</html>

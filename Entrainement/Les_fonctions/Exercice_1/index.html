@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let jour = new Date;
+        console.log(jour)
+
+        jour.getDay();
+        console.log(jour.getDay());
+        
+        let semaine = new Array ("Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi");
+
+        function jourSemaine() {
+            return semaine[jour.getDay()]
+        }
+        console.log("Le jour actuel est "+ jourSemaine())
+
+    </script>
+</body>
+</html>

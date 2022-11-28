@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le doc par l'exemple</title>
+    <style>
+        .fondTitre {
+            background-color:black;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titre">Je suis un titre</h1>
+    <script>
+        const leTitre = document.querySelector("#titre"); // association de la balise à la constante
+        leTitre.textContent = "je suis un nouveau titre"; // modification du texte
+        leTitre.style.color = "red"; // modification de la couleur ddu texte
+        leTitre.classList.add("fondTitre"); // ajout d'une classe à la balise.=
+            </script>
+</body>
+</html>

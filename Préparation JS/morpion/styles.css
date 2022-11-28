@@ -1,0 +1,51 @@
+.titre {
+    text-align: center;
+}
+td {
+    border: solid 5px black;
+    padding: 70px;
+}
+table {
+    border-collapse: collapse;      
+}
+.tableau {
+    display: flex;
+    justify-content: center;
+}
+.case-1 {
+    border-top: none;
+    border-left: none;
+}
+.case-2 {
+    border-top: none;
+}
+.case-3 {
+    border-top: none;
+    border-right: none;
+}
+.case-4 {
+    border-left: none;
+}
+.case-5 {
+    
+}
+.case-6 {
+    border-right: none;
+}
+.case-7 {
+    border-left: none;
+    border-bottom: none;
+}
+.case-8 {
+    border-bottom: none;
+}
+.case-9 {
+    border-right: none;
+    border-bottom: none;
+}
+
+
+
+
+
+

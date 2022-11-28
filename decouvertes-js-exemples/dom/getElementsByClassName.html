@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<ul>
+    <li class="liStyle">ba</li>
+    <li class="liStyle">be</li>
+    <li class="liStyle">bi</li>
+    <li class="liStyle">bo</li>
+</ul>
+<div id="sub">
+    <ul>
+        <li class="liStyle">ba</li>
+        <li class="liStyle">be</li>
+        <li class="liStyle">bi</li>
+        <li class="liStyle">bo</li>
+    </ul>
+</div>
+<script>
+
+const getLi = document.getElementsByClassName("liStyle");
+// attention cela retourne une collection, il faut en faire un tableau !!
+Array.from(getLi).forEach(element => {
+    element.style.backgroundColor = "red";
+})
+const getLi2 = document.querySelector("#sub").getElementsByClassName("liStyle");
+Array.from(getLi2).forEach(element => {
+    element.style.backgroundColor = "blue";
+})
+</script>
+
+</body>
+</html>

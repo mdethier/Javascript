@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Une promesse old style</title>
+</head>
+
+<body>
+    <script>
+        /* Création d'un objet promesse asynchrone, elle attend de retourner resolve si tout va bien
+        et reject si il y a un problème */
+        const unePromesse = new Promise((resolve, reject) => {
+            // Création d'un objet XMLHttpRequest, cet objet va lancé une connexion vers une url
+            let request = new XMLHttpRequest();
+            // evenenement qui attend le retour de l'appel à l'url
+            request.addEventListener("loadend", function () {
+                // Conversion du texte reçu dans le corp du message en un objet.
+                const response = JSON.parse(this.responseText);
+                // Verification du status de retour de la page
+
+                if (this.status === 200) {
+                    // https://restfulapi.net/http-status-codes/
+                    // Tou va bien, on envoie resolve
+                    resolve(response);
+                } else {
+                    // Problème, on envoie resolve
+                    console.log(this.status);
+                    reject(response);
+                }
+            });
+            // Paramètre pour la requète
+            // https://restfulapi.net/http-methods/
+            request.open("GET", "https://swapi.py4e.com/api/planets/1");
+             // envoi de la requète
+            request.send();
+        })
+
+
+        // Retour de la promesse
+        unePromesse.then((response) => { // then() intercepte le resolve
+            console.log(response)
+        }).catch((error) => { // catch() intercepte le reject
+            console.log(error)
+        })
+    </script>
+</body>
+
+</html>

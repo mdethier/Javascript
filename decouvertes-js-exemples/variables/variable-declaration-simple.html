@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var</title>
+</head>
+<body>
+    <script>
+        let maNouvelleVariable;
+        console.log("maNouvelleVariable est de type : "+typeof maNouvelleVariable);
+        let maNouvelleVariable2 = 12;
+        console.log("maNouvelleVariable2 est de type : "+typeof maNouvelleVariable2);
+        let maNouvelleVariable3 = "12";
+        console.log("maNouvelleVariable3 est de type : "+typeof maNouvelleVariable3);
+        // est oui, celle-ci est une chaîne de caractère et pas un nombre !!
+        let maNouvelleVariable4 = true;
+        console.log("maNouvelleVariable4 est de type : "+typeof maNouvelleVariable4);
+        // javascript est non typé, si vous modifiez maNouvelleVariable4 en chaîne de caractère, c'est pas un problème
+        maNouvelleVariable4 = "Fini le booleen !";
+        console.log("maNouvelleVariable4 est de type : "+typeof maNouvelleVariable4);
+        let maNouvelleVariable5 = ["1","2","3"]; // c'est un tableau
+        console.log("maNouvelleVariable4 est de type : "+typeof maNouvelleVariable5); // mais ca retourne un objet !
+        let maNouvelleVariable6 = Symbol('velo');
+        let maNouvelleVariable7 = Symbol('velo');
+        if (maNouvelleVariable6 === maNouvelleVariable7) {
+            console.log("C'est égal");
+        } else {
+            console.log("C'est pas égal");
+        }
+        </script>
+</body>
+</html>

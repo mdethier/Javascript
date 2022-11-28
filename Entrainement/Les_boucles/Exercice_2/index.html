@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const gafa = [{ nom: "Google", url: "https://www.google.com" }, { nom: "Amazon", url: "https://www.amazon.fr" }, { nom: "Facebook", url: "https://www.facebook.fr" }, { nom: "Apple", url: "https://www.apple.fr" }]
+
+        
+
+        const CorpsDeTexte = document.querySelector("body");
+        const list = document.createElement("ul");
+        
+        gafa.forEach(link => {
+           console.log(link.nom + link.url);
+           const lien = document.createElement("a");
+           lien.textContent = link.nom;
+           lien.href = link.url;
+           const elementLi = document.createElement("li");
+           elementLi.prepend(lien);
+           list.appendChild(elementLi);
+        })
+        CorpsDeTexte.prepend(list);
+     
+       // list.prepend(element);
+        //element.prepend(lien);
+        //CorpsDeTexte.prepend(list);
+    </script>
+</body>
+</html>

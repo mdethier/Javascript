@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.fruits {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.boite-image-fruits {
+    overflow: hidden;
+    height: 100vh;
+}
+.image-fruits {
+    display: flex;
+}
+.liste-fruits {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.fruit {
+    
+    height: 25%;
+    background-color: grey;
+    color: white;
+    font-size: 30px; 
+    font-style: italic;
+}
+.fruit:hover {
+    background-color: darkslategrey;
+}
+.Flex {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.img-fruit {
+display: none;
+}

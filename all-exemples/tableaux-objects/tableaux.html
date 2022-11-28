@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tableaux</title>
+</head>
+
+<body>
+    <script>
+        const monMeuble = ["tirroir 0", " tirroir 1", "tirroir 2"];
+        const monMeuble2 = new Array("tirroir 0", " tirroir 1", "tirroir 2", "tirroir 4");
+
+        console.log(monMeuble[1]);
+        console.log(monMeuble2[3]);
+
+        // attention, le premier élément d'un tableau à la clef  0
+        console.log(monMeuble2[0]);
+
+        const unNouveauMeuble = [12, { nom: "Doe", prenom: "john" }, ["salade", "tomate", "oignon"], "et du texte"];
+        console.log(unNouveauMeuble[1].prenom);
+        console.log(unNouveauMeuble[2][1]);
+
+        // pour savoir le nombre d'élément dans le tableau
+        console.log("Il y a " + unNouveauMeuble.length + " dans le tableau");
+
+        // modifions ce tableau 
+        unNouveauMeuble[0] = 14;
+        unNouveauMeuble[1].nom = "inconnu";
+        unNouveauMeuble[2].push("frites");
+        console.log(unNouveauMeuble);
+
+        // supprimer le dernier élément
+        unNouveauMeuble.pop();
+        console.log(unNouveauMeuble);
+
+        // supprimer le premier élément
+        unNouveauMeuble.shift();
+        console.log(unNouveauMeuble);
+
+        //ajouter un élément à la fin
+        unNouveauMeuble.push("Ajout d'un élément à la fin");
+        console.log(unNouveauMeuble);
+
+        //ajouter un élément au début du tableau
+        unNouveauMeuble.unshift("Ajout d'un élément au début");
+        console.log(unNouveauMeuble);
+
+    </script>
+</body>
+
+</html>

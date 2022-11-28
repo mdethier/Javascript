@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fonctions</title>
+</head>
+
+<body>
+    <h1 id="heure"></h1>
+    <h2 id="hello"></h2>
+    <h3 id="jeux"></h3>
+    <script>
+        // une fonction sans paramètre
+        function quelleHeureIlEst() {
+            let today = new Date;
+            return today.getHours() + ":" + today.getMinutes();
+        }
+        document.querySelector("#heure").textContent = "Il est " + quelleHeureIlEst();
+
+        // une fonction avec des paramètres
+        function direBonjour(prenom) {
+            return "Bonjour " + prenom + " !";
+        }
+        document.querySelector("#hello").textContent = direBonjour("Philippe");
+
+        // une fonction avec un tableau par exemple
+        let unTableau = ["Pierre", "feuille", "ciseaux"];
+        function randomMachine(unTableau) {
+            let aleatoire = Math.floor(Math.random() * unTableau.length);
+            return unTableau[aleatoire];
+        }
+        document.querySelector("#jeux").textContent = randomMachine(unTableau);
+
+
+        // ce qui a de bien avec la fonction du dessus, c'est qu'elle sert avec n'importe quel tableau !!
+        let unTableau2 = ["Pierre", "feuille", "ciseaux","serpent", "Spock"];
+        alert(randomMachine(unTableau2));
+        </script>
+</body>
+
+</html>

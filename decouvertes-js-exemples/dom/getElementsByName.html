@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" name="nom">
+<input type="text" name="prenom">
+<input type="text" name="prenom">
+<input type="text" name="prenom">
+<script>
+
+const getFormByName = document.getElementsByName("nom");
+const getFormByName2 = document.getElementsByName("prenom");
+/* attention cela retourne un tableau, si un seul element,
+alors il faut aller le chercher avec la clef 0*/
+getFormByName[0].style.borderColor = "red";
+// faire une boucle pour un resultat multiple
+getFormByName2.forEach( element => {
+    element.style.borderColor = "blue";
+})
+</script>
+
+</body>
+</html>

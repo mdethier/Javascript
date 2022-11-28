@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La boucle for</title>
+</head>
+
+<body>
+    <script>
+          let listeApprenants = ["BAALI Ike-David", "DETHIER Maxime", "DOMERGUE Jonathan", "FALCONNIER Franck", "OZMANOV Alick", "PENTEADO Anthony", "PETIT Wilfrid", "PICHOFF Brandon", "TRAVASSOS Carl-Antoine"];
+        //méthode 1
+        for (i = 0; i < listeApprenants.length; i++) {
+            console.log("Mon nom est " + listeApprenants[i].split(" ")[0] + " et mon prénom est " + listeApprenants[i].split(" ")[1]);
+        }
+        // méthode 2
+        listeApprenants.forEach(apprenant => {
+            console.log("je suis " + apprenant+ "en arrow function");
+        })
+          // méthode 3
+        listeApprenants.forEach(function (apprenant) {
+            console.log("je suis " + apprenant+ "en fonction simple");
+        })
+        // méthode 4
+        for (const apprenant of listeApprenants) {
+            console.log("je suis toujours "+apprenant);
+        }
+
+
+    </script>
+</body>
+
+</html>

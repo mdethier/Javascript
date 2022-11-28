@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evenement</title>
+    <style>
+        .carre {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            padding:20px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let couleurCarre = ["yellow", "red", "blue", "green","purple", "gray"];
+        const body = document.querySelector("body");
+        couleurCarre.forEach(couleur => {
+            const newDiv = document.createElement('div');
+            newDiv.style.backgroundColor = couleur;
+            newDiv.textContent = couleur;
+            newDiv.classList.add("carre");
+            newDiv.addEventListener("mouseover", (event) => {
+                body.style.backgroundColor = couleur;
+            });
+            newDiv.addEventListener("mouseout", (event) => {
+                body.style.backgroundColor = "white";
+            });
+            newDiv.addEventListener("click", (event) => {
+               alert(`c'est du ${couleur}`);
+            });
+
+            body.appendChild(newDiv);
+
+        })
+    </script>
+</body>
+
+</html>

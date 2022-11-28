@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Une promesse</title>
+</head>
+
+<body>
+  <script>
+    // si il y a quelque chose d'asynchrone dans une fonction, alors il faut utiliser async et await
+    async function getPlanet() {
+      const response = await fetch('https://swapi.dev/api/planets/1/', {method: 'GET'});
+      const planet = await response.json();
+      return planet;
+    }
+
+    getPlanet().then(planet => {
+      console.log(planet);
+    }).catch(error => {
+      console.log(error);
+    });
+  </script>
+</body>
+
+</html>

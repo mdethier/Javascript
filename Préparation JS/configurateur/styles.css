@@ -1,0 +1,142 @@
+
+.image {
+    z-index: -1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.poche-bleu {
+    z-index: 1;
+    position: absolute;
+}
+.ensemble {
+    display: flex;
+    flex-direction: row;
+}
+.infos-bloc {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    align-content: space-around;
+    z-index: 2;
+    width: 50%;
+    background-color: lightgrey;
+}
+.prix {
+    font-size: 30px;
+    color: grey;
+}
+.infos-tablier {
+    background-color: grey;
+    color: white;
+    padding: 10px 30px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.tablier {
+    display: flex;
+}
+.infos-poche {
+    
+    background-color: grey;
+    color: white;
+    padding: 10px 30px;
+    margin: 10px;
+}
+.poche {
+    display: flex;
+    
+}
+
+.couleur {
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   display: flex;
+   flex-direction: column;
+   margin: 10px;
+}
+.couleur:hover {
+    border: solid 2px black;
+}
+.jaune {
+    background: yellow;
+
+}
+.orange {
+    background: orange;
+}
+.mauve {
+    background: purple
+}
+.bleu {
+    background:blue
+}
+.marron {
+    background: brown;
+}
+.rouge {
+    background: red;
+}
+.vert {
+    background: green;
+}
+
+.infos-texte {
+    background-color: grey;
+    color: white;
+    padding: 10px 30px;
+    margin: 10px;
+}
+.image-chasuble-orange {
+    height: 945px;
+    width: 630px;
+    position: absolute;
+}
+.image-poche-bleu {
+    height: 945px;
+    width: 630px;
+    position: absolute;
+}
+.orange {
+    border: solid 2px black;
+}
+.bleu {
+    border: solid 2px black;
+}
+.noir {
+    background: black;
+}
+.blanc {
+    background: white;
+}
+.orange-texte {
+    border: none;
+}
+.couleur-texte {
+    display: flex;
+}
+.texte-ecrit {
+    position: absolute;
+    display: flex;
+    justify-content: right;
+    font-style: italic;
+    font-weight: bold;
+    font-size: small;
+    transform: rotate(-5deg);
+    top: 340px;
+    left: 300px;
+}
+.bouton-radio {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.zone-texte {
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+

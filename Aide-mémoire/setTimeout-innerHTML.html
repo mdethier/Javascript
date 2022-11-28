@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout et innerHTML</title>
+    <style>
+        body {
+            display: flex;
+        }
+
+        .carre {
+            width: 100px;
+            height: 100px;
+            opacity: 0;
+            transition: opacity 1s;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const theBody = document.querySelector("body");
+        const carreArray = [{ couleur: "bleu", code: "blue" }, { couleur: "rouge", code: "red" }, { couleur: "vert", code: "green" }, { couleur: "jaune", code: "yellow" }];
+        carreArray.forEach((carre, index) => {
+            const unCarre = document.createElement("div");
+            unCarre.classList.add("carre");
+            unCarre.innerHTML = `<p id="${carre.couleur}">${carre.couleur}</p>`;
+            unCarre.style.backgroundColor = carre.code;
+            theBody.appendChild(unCarre);
+            setTimeout(() => {
+                    unCarre.style.opacity = 1;
+                }, 1000*index);
+            document.getElementById(carre.couleur).addEventListener("click", (event) => {
+                alert("Je suis l'id " + carre.couleur);
+            })
+
+        })
+    </script>
+</body>
+
+
+</html>

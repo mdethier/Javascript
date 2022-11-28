@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planet & residents</title>
+</head>
+
+<body>
+  <h1>Ca vient !!</h1>
+  <div id="residents"></div>
+
+  <script>
+    /* en partant de ce code, il vous faudra aller chercher
+    les residents de la planete et les afficher dans la page html */
+    const residentList = document.getElementById("residents");
+
+    async function getPlanet() {
+      const response = await fetch('https://swapi.dev/api/planets/1/', { method: 'GET' });
+      const planet = await response.json();
+      return planet;
+    }
+
+    getPlanet().then(planet => {
+      document.querySelector("h1").textContent = "Personnages de la planète " + planet.name;
+      console.log(planet);
+      console.log(planet.residents);
+      planet.residents.forEach(chaque => {
+        getResidents(chaque).then(residentName => {
+          console.log(residentName.name);
+
+         const listElement = document.createElement("li");
+         listElement.textContent = residentName.name;
+         residentList.append(listElement);
+         
+
+        })
+      });
+    }).catch(error => {
+      console.log(error);
+    });
+
+    // CODE PERSO //
+
+    async function getResidents(resident) {
+      const response = await fetch(resident, { method: 'GET' });
+      const residentData = await response.json();
+      return residentData;
+    }
+
+
+  </script>
+</body>
+
+</html>

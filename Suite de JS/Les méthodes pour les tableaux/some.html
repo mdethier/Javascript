@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+                const optionsTissu = [
+            { couleur: 'Jaune', code: '#e2d047', image: './images/option-1-jaune.png', price: 12.30 },
+            { couleur: 'Orange', code: '#f1722f', image: './images/option-1-orange.png', price: 12.00 },
+            { couleur: 'Violet', code: '#bd3ad8', image: './images/option-1-violet.png', price: 12.10 }
+        ];
+        console.log(optionsTissu.some(tissu => tissu.price >= 12));
+        console.log(optionsTissu.some(tissu => tissu.price < 12));
+        
+
+    </script>
+</body>
+</html>
