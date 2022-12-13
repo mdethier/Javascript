@@ -40,17 +40,24 @@
 ];
 // map ------------------------------------
 
+
 // faire un tableau de tous les noms
-console.log("ici");
+let noms = personnages.map(personnage => personnage.nom);
+console.log(noms)
 // faire un tableau de tous les poids des personnages
-console.log("ici");
+let poids = personnages.map(personnage => personnage.poids);
+console.log(poids)
 // faire un tableau avec les noms et les poids des personnages
-console.log("ici");
+let nomsPoids = personnages.map(personnage => [personnage.nom, personnage.poids]);
+console.log(nomsPoids)
 // faire un tableau uniquement des prénoms
-console.log("ici");
+let prenoms = personnages.map(personnage => personnage.nom.split(" ")[0] );
+
+console.log(prenoms)
 
 
 // reduce ------------------------------------
+
 // poids total des personnages
 console.log("ici");
 // taille moyenne des personnages
