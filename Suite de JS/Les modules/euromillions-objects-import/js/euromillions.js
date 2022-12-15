@@ -1,3 +1,4 @@
+import {Numero} from "./numero.js"
 window.addEventListener('load', () => {
 const resultat = document.getElementById("resultat");
 const newNumberArray = [];
