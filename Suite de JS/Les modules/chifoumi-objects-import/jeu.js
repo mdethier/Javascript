@@ -1,3 +1,4 @@
+import {Chifoumi} from "./chifoumi.js"
 window.addEventListener("load", () => {
     const zoneJeux = document.querySelector("#jeu");
     const boutonRejouer = document.querySelector("#boutonRejouer");

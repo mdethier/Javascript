@@ -1,4 +1,4 @@
-class Chifoumi {
+export class Chifoumi {
     constructor() {
         this.resultat = "aucun";
         this.chifoumiOptions = ["pierre", "ciseau", "feuille"];
