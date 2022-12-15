@@ -1,4 +1,5 @@
-class Fruit {
+import { data,fruits,imageTochange } from "./data.js";
+export class Fruit {
     constructor(name, image) {
         this.name = name;
         this.image = image;
