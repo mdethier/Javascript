@@ -1,4 +1,5 @@
-class BulletTexte { 
+import {bulletTexteArray, variables, repricing } from "./variables.js";
+export class BulletTexte { 
     constructor(couleur, code) {
         this.couleur = couleur;
         this.code = code;

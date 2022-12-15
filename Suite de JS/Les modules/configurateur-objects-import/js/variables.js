@@ -1,8 +1,8 @@
-const bulletTissuArray = [];
-const bulletPocheArray = [];
-const bulletTexteArray = [];
-const variables = {selectedTissu: "Violet",selectedPoche: "Rouge",customText: 'Votre texte ici',selectedTextColor: 'Noir',textOption: true,prixLettre: 1.80};
-function repricing() {
+ export const bulletTissuArray = [];
+ export const bulletPocheArray = [];
+ export const bulletTexteArray = [];
+ export const variables = {selectedTissu: "Violet",selectedPoche: "Rouge",customText: 'Votre texte ici',selectedTextColor: 'Noir',textOption: true,prixLettre: 1.80};
+ export function repricing() {
     let calculatedPrice = 0;
     calculatedPrice += bulletTissuArray.find(tissu => tissu.getCouleur == variables.selectedTissu).getPrice;
 

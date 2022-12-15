@@ -1,4 +1,5 @@
-class BulletTissu { 
+import { bulletTissuArray,variables,repricing } from "./variables.js";
+export class BulletTissu { 
     constructor(couleur, code, image, price) {
         this.couleur = couleur;
         this.code = code;

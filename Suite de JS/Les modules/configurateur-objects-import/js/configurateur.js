@@ -1,15 +1,22 @@
-const optionsTissu = [
+import { BulletTissu } from "./bulletTissu.js";
+import { BulletPoche } from "./bulletPoche.js";
+import { BulletTexte } from "./bulletTexte.js";
+import { bulletTissuArray,bulletPocheArray,bulletTexteArray,variables } from "./variables.js";
+import { repricing } from "./variables.js";
+
+
+export const optionsTissu = [
     { couleur: 'Jaune', code: '#e2d047', image: './images/option-1-jaune.png', price: 12.30 },
     { couleur: 'Orange', code: '#f1722f', image: './images/option-1-orange.png', price: 12.00 },
     { couleur: 'Violet', code: '#bd3ad8', image: './images/option-1-violet.png', price: 12.10 }
 ];
-const optionsPoche = [
+export const optionsPoche = [
     { couleur: 'Bleu', code: '#11119e', image: './images/option-2-bleu.png', price: 8.30 },
     { couleur: 'Fuchsia', code: '#991157', image: './images/option-2-fuchsia.png', price: 8.50 },
     { couleur: 'Rouge', code: '#d31431', image: './images/option-2-rouge.png', price: 8.10 },
     { couleur: 'vert', code: '#a1cc16', image: './images/option-2-vert.png', price: 8.75 }
 ];
-const couleurText = [
+export const couleurText = [
     { couleur: 'Blanc', code: '#FFFFFF' },
     { couleur: 'Noir', code: '#000000' },
     { couleur: 'Bleu', code: '#11119e' },
@@ -57,7 +64,7 @@ window.addEventListener("load", () => {
 
     document.querySelector("#customText").addEventListener("input", (event) => {
         variables.customText = event.target.value;
-        document.querySelector(".textePerso").textContent = customText;
+        document.querySelector(".textePerso").textContent = variables.customText;
         repricing();
     })
     document.querySelectorAll('[name="UseText"]').forEach(element => {

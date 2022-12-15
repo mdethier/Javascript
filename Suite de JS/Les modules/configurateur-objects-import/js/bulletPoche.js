@@ -1,4 +1,5 @@
-class BulletPoche { 
+import {bulletPocheArray, variables,repricing } from "./variables.js";
+export class BulletPoche { 
     constructor(couleur, code, image, price) {
         this.couleur = couleur;
         this.code = code;
